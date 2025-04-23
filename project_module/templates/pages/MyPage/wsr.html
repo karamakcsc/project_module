@@ -379,7 +379,7 @@
         }
         // Call the backend method to get the remaining work
         frappe.call({
-            method: "erpnext.api.task.get_work_left", // Ensure this path is correct
+            method: "project_module.api.get_work_left", // Ensure this path is correct
             // args: {
             //     projectName: project_name
             // },
@@ -451,7 +451,7 @@
         }
         // Call the backend method to get the status counts
         frappe.call({
-            method: "erpnext.api.task.get_status_counts", // Ensure this path is correct
+            method: "project_module.api.get_status_counts", // Ensure this path is correct
             callback: function (response) {
                 if (response && response.message) {
                     const taskData = response.message; // This should be the array of objects with status and count
@@ -495,7 +495,7 @@
         }
         // Call the backend method to get the resource tasks counts
         frappe.call({
-            method: "erpnext.api.task.get_task_counts_by_employee", // Ensure this path is correct
+            method: "project_module.api.get_task_counts_by_employee", // Ensure this path is correct
             callback: function (response) {
                 if (response && response.message) {
                     const resourceData = response.message; // This should be the array of objects with resource and count
