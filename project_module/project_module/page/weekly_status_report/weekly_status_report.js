@@ -944,7 +944,7 @@ function loadProjectDetails(projectName) {
 
         // Work Left To Do vs. Time Chart
         frappe.call({
-            method: "project_module.api.task.get_work_left",
+            method: "project_module.project_module.api.task.get_work_left",
             args: {
                 projectname: projectName
             },
@@ -995,7 +995,7 @@ function loadProjectDetails(projectName) {
 
         // Task Status Distribution Chart
         frappe.call({
-            method: "project_module.api.task.get_status_counts",
+            method: "project_module.project_module.api.task.get_status_counts",
             args: {
                 projectname: projectName
             },
@@ -1017,7 +1017,7 @@ function loadProjectDetails(projectName) {
 
         // Resource Allocation Chart
         frappe.call({
-            method: "project_module.api.task.get_task_counts_by_employee",
+            method: "project_module.project_module.api.task.get_task_counts_by_employee",
             args: {
                 projectname: projectName
             },
