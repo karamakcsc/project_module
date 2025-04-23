@@ -1,8 +1,6 @@
 // Copyright (c) 2024, Ishaq and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Project Budget Category", {
-// 	refresh(frm) {
-
-// 	},
-// });
+frappe.listview_settings['Project Budget Category'] = {
+    hide_name_column: true,
+};
