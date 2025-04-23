@@ -17,7 +17,7 @@ def get_project_data(project):
     project_charter_doc = frappe.get_doc("Project Charter", project_charter)
 
     # Render a Jinja template and pass the fetched documents
-    html_content = frappe.render_template("erpnext/templates/pages/MyPage/wsr.html", {
+    html_content = frappe.render_template("project_module/templates/pages/MyPage/wsr.html", {
         "project": project_doc,
         "project_charter": project_charter_doc
     })
@@ -123,7 +123,7 @@ def get_status_options():
 @frappe.whitelist()
 def get_status_counts(projectname):
     """
-    Retrieves the count of tasks for each status.
+    Retrieves the count of tasks for each status.s
     """
     # Get the task statuses
     status_options = get_status_options()  # Ensure this method returns a list of status names
