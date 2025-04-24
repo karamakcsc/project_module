@@ -1,11 +1,6 @@
 // Copyright (c) 2024, Ishaq and contributors
 // For license information, please see license.txt
 
-frappe.listview_settings['Risks Log'] = {
-    hide_name_column: true,
-};
-
-
 frappe.ui.form.on('Risks Log', {
     onload: function(frm) {
         if (!frm.doc.project) {

@@ -1,15 +1,6 @@
 // Copyright (c) 2024, Ishaq and contributors
 // For license information, please see license.txt
 
-frappe.views.calendar["Meeting Schedule"] = {
-	field_map: {
-		"start": "scheduled_from",
-		"end": "scheduled_to",
-		"id": "name",
-		"title": "meeting_agenda"
-	}
-};
-
 frappe.ui.form.on('Meeting Schedule', {
     onload: function(frm) {
         if (!frm.doc.project) {
